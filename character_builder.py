@@ -4,7 +4,6 @@ with the character's ancestry (or in 5e language "race"), background, class, and
 of rolled ability scores. I'm working on how it reminds of ability score increases from
 ancestry, but given the derth of non +2/+1 options, we'll see how it plays out.'''
 
-#the first part of this is the stat rolling. the randint feature simulates rolling
 from random import randint
 from lib.asset_helper import rand_asset_line  #this function was built to take a .txt file as its argument
 from lib.asset_helper import pick_one_from_list  #this function takes a list as its argument
@@ -37,10 +36,19 @@ def describe(character):  #now for the final print, including a/an
         print("don\'t forget your score increases: likely +2/+1") #after done with backgrounds, set to check human, half-elf, etc.
     print("")
 
-#after testing, i've left it in the running thrice mode, this part can be easily modified though
+#this is the variable output setting
 print("welcome to national parks' random character generator")
-print("current setting is make-three: 3 characters will be generated, have fun picking")
-input("press ENTER to continue")  #just a pause really
-print("")
-for i in range(3):
-    describe(build_char())
+valid_input = False 
+while not valid_input:
+    x = input("How many characters would you like to build?  ")
+    print('')
+    if x.isdigit():  #checks that each character in the string is a number
+        x = int(x)  #converts the number to an integer (which it should already be)
+        x = min(10,x)  #makes x the smaller of itself and 10, i.e. reduces large numbers
+        x = max(1, x)  #makes x the larger of itselff and 1, i.e. no 0
+        for i in range(x):
+            describe(build_char())
+        valid_input = True
+    else:
+        print("invalid entry, please try again")
+        print('')
