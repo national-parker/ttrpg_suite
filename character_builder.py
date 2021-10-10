@@ -41,7 +41,6 @@ print("welcome to national parks' random character generator")
 valid_input = False 
 while not valid_input:
     x = input("How many characters would you like to build?  ")
-    print('')
     if x.isdigit():  #checks that each character in the string is a number
         x = int(x)  #converts the number to an integer (which it should already be)
         x = min(10,x)  #makes x the smaller of itself and 10, i.e. reduces large numbers

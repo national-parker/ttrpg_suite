@@ -72,7 +72,23 @@ def describe(char):  #this program will print out a nice sheet for the NPC, taki
     print("High stat: %s    Low stat: %s" % (char["h_stat"],char["l_stat"]))
     print("")
 
-#quickly testing by building 3 NPCs
+'''#quickly testing by building 3 NPCs
 for i in range(3):
-    describe(build_npc())
+    describe(build_npc())'''
+
+#this is the variable output setting
+print("welcome to national parks' random npc generator")
+valid_input = False 
+while not valid_input:
+    x = input("How many npcs would you like to generate?  ")
+    if x.isdigit():  #checks that each character in the string is a number
+        x = int(x)  #converts the number to an integer (which it should already be)
+        x = min(10,x)  #makes x the smaller of itself and 10, i.e. reduces large numbers
+        x = max(1, x)  #makes x the larger of itselff and 1, i.e. no 0
+        for i in range(x):
+            describe(build_npc())
+        valid_input = True
+    else:
+        print("invalid entry, please try again")
+        print('')
 
