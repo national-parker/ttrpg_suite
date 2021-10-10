@@ -1,0 +1,8 @@
+orc (VGM or ERLW or EGW)
+lizardfolk (VGM)
+kobold (VGM)
+hobgoblin (VGM or ERLW)
+goblin (VGM or GGR or ERLW)
+halfling (PHB or SCAG or EGW)
+elf (PHB or MTF)
+dwarf (PHB or MTF)
