@@ -21,6 +21,7 @@ def build_char():
     return character
 
 def describe(character):  #now for the final print, including a/an
+    print('')
     if character['ancestry'][0] in vowels:
         print("you have rolled an %s %s" % (character['ancestry'], character['class']))  #if ancestry starts with a vowel
     else:
@@ -34,7 +35,6 @@ def describe(character):  #now for the final print, including a/an
         print("don\'t forget your score increases: +1 to all")
     else:  #if it's not variant human
         print("don\'t forget your score increases: likely +2/+1") #after done with backgrounds, set to check human, half-elf, etc.
-    print("")
 
 #this is the variable output setting
 print("welcome to national parks' random character generator")
