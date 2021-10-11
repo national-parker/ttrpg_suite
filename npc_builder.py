@@ -58,15 +58,15 @@ vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
 def describe(char):  #this program will print out a nice sheet for the NPC, taking the directory built above as its argument
     print('')
     if char['apperance'][0] in vowels:  #appearance, ancestry, physical traits
-        print("This npc is an %s %s with %s and a %s personality." % (char["apperance"], char["ancestry"], char["physical trait"], char['personality']))
+        print("This npc is an %s %s \nwith %s and a %s personality." % (char["apperance"], char["ancestry"], char["physical trait"], char['personality']))
     else:
-        print("This npc is a %s %s with %s and a %s personality." % (char["apperance"], char["ancestry"], char["physical trait"], char['personality']))
+        print("This npc is a %s %s \nwith %s and a %s personality." % (char["apperance"], char["ancestry"], char["physical trait"], char['personality']))
     if char['pronoun'] == 'they':  #job
-        print("If they are encountered in a city, they are a %s.  Otherwise, they are a %s." % (char["job, city"], char["job, rural"]))
+        print("If they are encountered in a city, they are a %s. \nOtherwise, they are a %s." % (char["job, city"], char["job, rural"]))
     else:
-        print("If %s lives in a city, %s is a %s.  Otherwise, %s is a %s." % \
+        print("If %s lives in a city, %s is a %s. \nOtherwise, %s is a %s." % \
               (char["pronoun"], char["pronoun"], char["job, city"], char["pronoun"], char["job, rural"]))
-    print("High stat: %s      Low stat: %s" % (char["h_stat"],char["l_stat"]))
+    print("High stat: %s    Low stat: %s" % (char["h_stat"],char["l_stat"]))
 
 '''#quickly testing by building 3 NPCs
 for i in range(3):
