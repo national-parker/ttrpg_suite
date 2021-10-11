@@ -40,8 +40,8 @@ capricious
 charmless
 cheerless
 compulsive
-cruel--overtly
-cruel--secretively
+cruel (overtly)
+cruel (subtle)
 cunning
 deceitful
 delusional
