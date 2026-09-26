@@ -6,7 +6,8 @@ from decimal import Decimal  #to truncate at the end
 import statistics  #for mean, median, and mode
 
 
-y = 100001  #see VARIABLE INPUT SECTION below; the number of overall tests; keeping to 100k for my poor laptop
+'''WARNING: if you're going to enable any of the debugging below to show results mid-loop, make sure you reduce the numberoftests value to something smaller/more legible'''
+numberoftests = 100001  #see VARIABLE INPUT SECTION below; the number of overall tests; keeping to 100k for my poor laptop
 
 
 #MAIN FUNCTION SECTION
@@ -67,7 +68,7 @@ while not valid_input:
         x = min(10,x)  #makes x the smaller of itself and 10, i.e. reduces large numbers
         x = max(1, x)  #makes x the larger of itselff and 1, i.e. no 0
 
-        supply_dice(x, y)  #calls the supply dice function and runs it through y number of trials (defined in first rows)
+        supply_dice(x, numberoftests)  #calls the supply dice function and runs it through the set number of trials (defined in first rows)
 
         valid_input = True  #the input was valid
 
