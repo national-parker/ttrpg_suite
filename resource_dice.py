@@ -36,7 +36,7 @@ def supply_dice(ndice, ntests):  #will take two arguments: the number of supply 
 
 #more debugging
         '''print("TOTAL ROLLS: " + str(nrolls))  #should show us how many rolls and how many times through the
-        print(" ")  #to skip a line'''
+        print("")  #to skip a line'''
 #end of more debugging
         
         finallist.append(nrolls)  #add how many rolls it took to the output list for statistical analysis
@@ -48,14 +48,17 @@ def supply_dice(ndice, ntests):  #will take two arguments: the number of supply 
     #get the mean to two decimal places
     meanforoutput = Decimal(statistics.mean(finallist))  #making the mean a Decimal for the truncation function to run
     tmeanforoutput = meanforoutput.quantize(Decimal('1.000'))  #truncating the mean to three decimal places
-    
-    print("MEAN NUMBER OF ROLLS:   " + str(tmeanforoutput))
-    print("MEDIAN NUMBER OF ROLLS: " + str(statistics.median(finallist)))
-    print("MODE NUMBER OF ROLLS:   " + str(statistics.mode(finallist)))
+
+    print("")
+    print("MEAN NUMBER OF ROLLS TO ZERO:   " + str(tmeanforoutput))
+    print("MEDIAN NUMBER OF ROLLS TO ZERO: " + str(statistics.median(finallist)))
+    print("MODE NUMBER OF ROLLS TO ZERO:   " + str(statistics.mode(finallist)))
 
 
 #VARIALBE INPUT SECTION
-print("welcome to national parks' supply dice statistical analysis module, a brute-force solution to forgetting your AP Stats class")
+print("welcome to national parks' supply dice statistical analysis module")
+print(" a brute-force solution to forgetting your AP Stats class!")
+print("")
 
 valid_input = False  #will check that the input works for this function
 z = 0  #safety escape from the below while loop
